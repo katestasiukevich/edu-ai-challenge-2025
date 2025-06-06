@@ -1,0 +1,32 @@
+[
+    {
+      "sentiment": "Negative",
+      "isRelevant": true,
+      "mainSubject": "sensor tracking and dongle malfunction",
+      "positives": [],
+      "painPoints": [
+        "sensor stops tracking intermittently",
+        "issue persists even when plugged in",
+        "dongle did not work",
+        "high cost not justified by performance"
+      ],
+      "improvementSuggestions": [
+        "improve sensor tracking reliability",
+        "ensure dongle functionality before shipping",
+        "justify pricing with higher performance or reliability"
+      ],
+      "featuresMentioned": ["sensor", "dongle", "8000hz"],
+      "userExpertise": "Experienced"
+    },
+    {
+      "sentiment": "Mixed",
+      "isRelevant": true,
+      "mainSubject": "value for money",
+      "positives": ["no flaws in performance according to user"],
+      "painPoints": ["not worth the high price"],
+      "improvementSuggestions": ["reduce price or add unique value to justify cost"],
+      "featuresMentioned": ["specs", "price"],
+      "userExpertise": "Unknown"
+    }
+  ]
+  
