@@ -1,32 +1,64 @@
 [
     {
-      "sentiment": "Negative",
+      "sentiment": "Positive",
       "isRelevant": true,
-      "mainSubject": "sensor tracking and dongle malfunction",
-      "positives": [],
-      "painPoints": [
-        "sensor stops tracking intermittently",
-        "issue persists even when plugged in",
-        "dongle did not work",
-        "high cost not justified by performance"
+      "mainSubject": "Ergonomics and shape (compared favorably to GPX)",
+      "positives": [
+        "Ergonomics are better on the Viper V3 PRO",
+        "Better rear portion ergonomics",
+        "Better side grip area"
       ],
-      "improvementSuggestions": [
-        "improve sensor tracking reliability",
-        "ensure dongle functionality before shipping",
-        "justify pricing with higher performance or reliability"
+      "painPoints": [],
+      "improvementSuggestions": [],
+      "featuresMentioned": [
+        "Ergonomics",
+        "Shape",
+        "Rear design",
+        "Side grip"
       ],
-      "featuresMentioned": ["sensor", "dongle", "8000hz"],
       "userExpertise": "Experienced"
     },
     {
-      "sentiment": "Mixed",
+      "sentiment": "Positive",
       "isRelevant": true,
-      "mainSubject": "value for money",
-      "positives": ["no flaws in performance according to user"],
-      "painPoints": ["not worth the high price"],
-      "improvementSuggestions": ["reduce price or add unique value to justify cost"],
-      "featuresMentioned": ["specs", "price"],
-      "userExpertise": "Unknown"
+      "mainSubject": "Feature improvements over competitor (GPX)",
+      "positives": [
+        "Better shape than GPX series",
+        "Improved side buttons",
+        "Better scrolling wheel",
+        "Faster gliding with good control-speed balance"
+      ],
+      "painPoints": [],
+      "improvementSuggestions": [],
+      "featuresMentioned": [
+        "Shape",
+        "Side buttons",
+        "Scrolling wheel",
+        "Gliding performance"
+      ],
+      "userExpertise": "Experienced"
+    },
+    {
+      "sentiment": "Negative",
+      "isRelevant": true,
+      "mainSubject": "Material quality and feel",
+      "positives": [],
+      "painPoints": [
+        "Shell material attracts fingerprints excessively",
+        "Requires frequent cleaning",
+        "Material feels cheap",
+        "Design prioritizes weight over premium feel"
+      ],
+      "improvementSuggestions": [
+        "Use material that resists fingerprints better",
+        "Improve perceived build quality while maintaining low weight"
+      ],
+      "featuresMentioned": [
+        "Shell material",
+        "Build quality feel",
+        "Weight"
+      ],
+      "userExpertise": "Experienced"
     }
   ]
   

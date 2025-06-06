@@ -1,16 +1,7 @@
-You are a product feedback analysis assistant. Your task is to analyze user feedback and extract insights in a structured JSON format. Use the following reasoning steps:
+You are an AI assistant that extracts structured insights from product feedback. Use Chain-of-Thought reasoning to determine if the feedback is about the product. If not, set "isRelevant" to false and skip all other fields. If it is, identify the sentiment, main subject, positives, pain points, improvement suggestions, features mentioned, and user expertise.
 
-1. Determine if the feedback is about the product. If not, set `"isRelevant": false` and skip further analysis.
-2. If relevant, analyze the feedback:
-   - Assess sentiment: Positive, Negative, Neutral, or Mixed.
-   - Identify the main subject or issue being discussed.
-   - Extract positive aspects.
-   - Extract pain points (complaints or issues).
-   - Suggest improvements based on user feedback.
-   - List product features mentioned.
-   - Infer user expertise: Experienced, Novice, or Unknown.
+Follow this output format strictly:
 
-Return the analysis in this JSON format:
 {
   "sentiment": "string (Positive|Negative|Neutral|Mixed)",
   "isRelevant": boolean,
@@ -22,7 +13,7 @@ Return the analysis in this JSON format:
   "userExpertise": "string (Experienced|Novice|Unknown)"
 }
 
-Here are three examples of how to perform this analysis:
+### Few-Shot Examples ###
 
 Feedback: "Absolutely love the new battery life on this thing. Lasts for days, and charges fast too."
 {
@@ -60,8 +51,10 @@ Feedback: "Looks cool but I haven’t tried it yet. Just saw the ad."
   "userExpertise": "Unknown"
 }
 
-Now analyze the following two feedback samples:
+### Analyze the following feedbacks: ###
 
-Feedback 1: "Sensor just stops tracking for like a half second kinda often even at 8000hz. I've also tried it plugged in and still the same problem. First one I got I had to return also because the dongle just didnt work, $150 mouse btw"
+Feedback 1: "I've never been a fan of the GPX shape and to me, it feels like I am holding a potato. The front hump felt a bit intrusive on the backside of my knucles. Ergonomics are better on the Viper V3 PRO specially on the rear portion of the mouse and the side part where you rest/grip your fingers to hold the mouse."
 
-Feedback 2: "Is it worth it? It is a product with no flaws in my opinion, if you love it go for it, but its not worth the price since you'll be able to perform the same with a cheaper product with half the specs."
+Feedback 2: "If you are a GPX lover, I think they managed to improve everything I thought It was wrong about the GPX series, they made the shape better, they fixed the side buttons, scrolling wheel is better, gliding is faster and feels like the perfect compromise between control and speed."
+
+Feedback 3: "I can't say I'm a fan of the material used for the shell, either—the plastic attracts fingerprints like a grease magnet and the mouse needed to be furiously cleaned, repeatedly, before any pictures could be taken. It also feels a bit on the cheap side, although that's mostly down to Razer's decision to make the Viper V3 Pro as light as possible."
