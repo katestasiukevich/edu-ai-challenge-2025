@@ -1,0 +1,16 @@
+{
+  "name": "6",
+  "version": "1.0.0",
+  "main": "enigma.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
