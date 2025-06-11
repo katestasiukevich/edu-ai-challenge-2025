@@ -83,13 +83,18 @@ function placeShipsRandomly(targetBoard, shipsArray, numberOfShips) {
         } else {
           placeRow += i;
         }
-        var locationStr = String(placeRow) + String(placeCol);
-        newShip.locations.push(locationStr);
-        newShip.hits.push('');
+              var locationStr = String(placeRow) + String(placeCol);
+      newShip.locations.push(locationStr);
+      newShip.hits.push('');
 
-        if (targetBoard === playerBoard) {
-          targetBoard[placeRow][placeCol] = 'S';
-        }
+      // Mark ship position on the board (for collision detection)
+      // For player board, use 'S' to show ships; for CPU board, use internal marker
+      if (targetBoard === playerBoard) {
+        targetBoard[placeRow][placeCol] = 'S';
+      } else {
+        // Mark CPU ships internally for collision detection (not visible to player)
+        targetBoard[placeRow][placeCol] = 'C';
+      }
       }
       shipsArray.push(newShip);
       placedShips++;
@@ -112,7 +117,9 @@ function printBoard() {
     var rowStr = i + ' ';
 
     for (var j = 0; j < boardSize; j++) {
-      rowStr += board[i][j] + ' ';
+      // Hide CPU ships from player view - show 'C' as '~'
+      var cellValue = board[i][j] === 'C' ? '~' : board[i][j];
+      rowStr += cellValue + ' ';
     }
     rowStr += '    ' + i + ' ';
 

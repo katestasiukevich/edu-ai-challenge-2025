@@ -118,8 +118,15 @@ export class Game {
         // Process the guess
         const result = this.cpuPlayer.receiveGuess(validation.coordinate);
         
-        // Update player's opponent tracking board
-        this.humanPlayer.getOpponentBoard().processGuess(validation.coordinate);
+        // Update player's opponent tracking board based on the actual result
+        const [row, col] = this.humanPlayer.getOpponentBoard().parseCoordinate(validation.coordinate);
+        this.humanPlayer.getOpponentBoard().guesses.add(validation.coordinate);
+        
+        if (result.hit) {
+          this.humanPlayer.getOpponentBoard().grid[row][col] = 'X';
+        } else {
+          this.humanPlayer.getOpponentBoard().grid[row][col] = 'O';
+        }
         
         // Show result
         this.display.showPlayerGuessResult(validation.coordinate, result);
