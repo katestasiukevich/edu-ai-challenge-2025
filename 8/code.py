@@ -205,9 +205,8 @@ class NumberValidator(Validator):
         Raises:
             ValidationError: If value is not numeric or fails range constraints
         """
-        # Type check - ensure value is a number (int or float) but not boolean
-        # Note: In Python, bool is a subclass of int, so we need to explicitly exclude booleans
-        if isinstance(value, bool) or not isinstance(value, (int, float)):
+        # Type check - ensure value is a number (int or float)
+        if not isinstance(value, (int, float)):
             raise ValidationError(f"Expected number, got {type(value).__name__}")
         
         # Range validation - check minimum value requirement
